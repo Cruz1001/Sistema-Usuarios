@@ -19,22 +19,35 @@ cadastro-usuarios-php/
 │   ├── Controllers/
 
 │   │   └── UsuarioController.php      # Lógica de controle (regras de negócio)
+
 │   ├── Models/
+
 │   │   └── Usuario.php                # Modelo com métodos CRUD e conexão com DB
+
 │
 ├── config/
+
 │   └── database.php                   # Arquivo de conexão com o banco de dados
+
 │
 ├── public/
+
 │   └── index.php                      # Ponto de entrada da aplicação
+
 │
 ├── resources/
+
 │   └── views/
+
 │       ├── cadastro.php               # Página com formulário de cadastro/edição
+
 │       └── lista.php                  # Página com a listagem de usuários
+
 │
 ├── routes/
+
 │   └── usuario/                       # Arquivos com definição das rotas de usuário
+
 │       └── web.php                    # Define as rotas HTTP (ex: /criar, /editar)
 
 # Tecnologias usadas
