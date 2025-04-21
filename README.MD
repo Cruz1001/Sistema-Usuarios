@@ -15,7 +15,9 @@ Este projeto é um sistema completo de cadastro de usuários, desenvolvido em PH
 # Estrutura do Projeto
 cadastro-usuarios-php/
 ├── app/
+
 │   ├── Controllers/
+
 │   │   └── UsuarioController.php      # Lógica de controle (regras de negócio)
 │   ├── Models/
 │   │   └── Usuario.php                # Modelo com métodos CRUD e conexão com DB
