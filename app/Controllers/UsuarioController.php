@@ -58,5 +58,11 @@ class UsuarioController{
         return 'Erro ao editar usuário!';
     }
 }
+  
+  public function buscarUsuarioPorId($id) {
+    $this->usuario->id = $id;
+    $stmt = $this->usuario->buscarPorId();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
 
 }

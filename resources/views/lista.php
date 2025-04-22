@@ -145,7 +145,7 @@ try {
 
                     <div class='acoes'>
                         <a href='../../public/index.php?rota=usuario&excluir_id=$id' class='btn excluir' onclick=\"return confirm('Tem certeza que deseja excluir este usuário?');\">Excluir</a>
-                        <a href='../../resources/views/editar.php?cpf=$cpf' class='btn editar'>Editar</a>
+                        <a href='../../resources/views/editar.php?id=$id' class='btn editar'>Editar</a>
                     </div>
                 </li>";
         }

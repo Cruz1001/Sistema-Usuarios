@@ -9,14 +9,13 @@ $conn = $db->conectar();
 
 $usuario = new Usuario($conn);
 
-if (!isset($_GET['cpf'])) {
-    echo "CPF de usuário não especificado.";
+if (!isset($_GET['id'])) {
+    echo "ID Não Informado.";
     exit;
 }
 
-$cpf = $_GET['cpf'];
-$dados = $usuario->buscarPorCpf($cpf);
-
+$id = $_GET['id'];
+$dados = $usuario->buscarUsuarioPorId($id);
 if (!$dados) {
     echo "Usuário não encontrado.";
     exit;

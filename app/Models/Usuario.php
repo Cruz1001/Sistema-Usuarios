@@ -84,5 +84,15 @@ class Usuario
 
             return false;
         }
+        public function buscarUsuarioPorId($id) {
+            $query = "SELECT id, nome, rg, cpf, email FROM " . $this->table . " WHERE id = :id LIMIT 1";
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+            $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+            return $usuario;
+          }
 
 }
