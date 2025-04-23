@@ -13,10 +13,10 @@ class Usuario
         public function __construct($db)
         {
             $this->conn = $db;
-        }
+            $this->criarTabela();    }
 
         public function criar(){
-            $query = "INSERT INTO " . $this->table . " SET nome = :nome, rg = :rg, cpf = :cpf, email = :email";
+            $query = "INSERT INTO " . $this->table . " (nome, rg, cpf, email) VALUES (:nome, :rg, :cpf, :email)";
 
             $stmt = $this->conn->prepare($query);
 
@@ -37,6 +37,18 @@ class Usuario
 
             return false;
         }
+
+        private function criarTabela() {
+            $sql = "CREATE TABLE IF NOT EXISTS usuarios (
+                      id SERIAL PRIMARY KEY,
+                      nome VARCHAR(100) NOT NULL,
+                      rg VARCHAR(20),
+                      cpf VARCHAR(20),
+                      email VARCHAR(100)
+                    )";
+        
+            $this->conn->exec($sql);
+          }
 
         public function listar(){
             $query = "SELECT id, nome, rg, cpf, email FROM " . $this->table . " ORDER BY id DESC";
