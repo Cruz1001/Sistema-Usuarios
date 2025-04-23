@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/../../config/Database.php';
-require_once __DIR__ . '/../../app/Controllers/UsuarioController.php';
-require_once __DIR__ . '/../../app/Models/Usuario.php'; 
+require_once __DIR__ . '/../../../config/Database.php';
+require_once __DIR__ . '/../../../app/Controllers/UsuarioController.php';
+require_once __DIR__ . '/../../../app/Models/Usuario.php'; 
 
 
 $db = new Database();
