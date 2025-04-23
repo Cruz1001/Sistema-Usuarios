@@ -54,8 +54,8 @@ switch ($rota) {
 <div class="container">
     <h2>Bem-vindo à página inicial!</h2>
 
-    <a href="../resources/views/cadastro.php" class="btn">Cadastrar Novo Usuário</a>
-    <a href="../resources/views/lista.php" class="btn">Ver Lista de Usuários</a>
+    <a href="resources/views/cadastro.php" class="btn">Cadastrar Novo Usuário</a>
+    <a href="resources/views/lista.php" class="btn">Ver Lista de Usuários</a>
 </div>
 
 </body>
