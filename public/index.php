@@ -3,7 +3,7 @@ $rota = $_GET['rota'] ?? 'home';
 
 switch ($rota) {
     case 'usuario':
-        require_once __DIR__ . '/../routes/usuario.php';
+        require_once __DIR__ . 'routes/usuario.php';
         break;
     default:
         break;
